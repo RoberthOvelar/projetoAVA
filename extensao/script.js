@@ -20,7 +20,7 @@ adicionaItensOrdenados()
 
 function adicionaItensOrdenados(){
     var semestre = itensOrdenados[0].querySelector(".aalink").innerHTML.substr(itensOrdenados[0].querySelector(".aalink").innerHTML.length-6)
-    //cursos.appendChild(document.createTextNode(semestre))
+    cursos.appendChild(document.createTextNode(semestre))
 
     for(var i = 0; i < itensOrdenados.length; i++){
         var len = itensOrdenados[i].querySelector(".aalink").innerHTML.length
@@ -28,10 +28,13 @@ function adicionaItensOrdenados(){
         if(i%2 == 0){itensOrdenados[i].style.backgroundColor = "rgba(0,0,0,.05)"}
         else {itensOrdenados[i].style.backgroundColor = "rgba(255,255,255)"}
         
+        //Adicionando linhas <hr> antes que uma disciplina de um novo semestre seja inserida em tela
         if(itensOrdenados[i].querySelector(".aalink").innerHTML.slice(len-6) != semestre){
             semestre = itensOrdenados[i].querySelector(".aalink").innerHTML.slice(len-6)
-            cursos.appendChild(document.createElement("hr")) //adicionar após cada semestre
+            cursos.appendChild(document.createElement("hr")) //adicionar antes de um novo semestre
+            cursos.appendChild(document.createTextNode(semestre)) //escrevendo em tela o novo semestre
         }
+        //adicionando a div cursos a coursebox
         cursos.appendChild(itensOrdenados[i])
     }
 }
