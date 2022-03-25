@@ -39,5 +39,5 @@ function adicionaItensOrdenados(){
     }
 }
 
-//Copyright © 2022 Ordanizador 2000
+//Copyright © 2022 Agrupador 2000
 //Desenvolvido por Roberth Fontes Ovelar
