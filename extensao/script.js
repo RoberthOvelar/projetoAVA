@@ -1,6 +1,6 @@
 //Selecionando divs que queremos ordenar
 var itens = document.querySelectorAll(".courses .coursebox")
-cursos = document.querySelector(".courses") //div geral dos cursos
+var cursos = document.querySelector(".courses") //div geral dos cursos
 
 //convertendo NodeList para ArrayList
 var itensOrdenados = [].map.call(itens, function(element){return element})
@@ -39,11 +39,5 @@ function adicionaItensOrdenados(){
     }
 }
 
-
-
-
-
-//Como ordenar?
-
-//console.log(itens[2].querySelector(".aalink").innerHTML.substr(itens[2].querySelector(".aalink").innerHTML.length-6, itens[2].querySelector(".aalink").innerHTML.length))
-/*itens[0].querySelector(".aalink").innerHTML.substr(itens[0].querySelector(".aalink").innerHTML.length-6, itens[0].querySelector(".aalink").innerHTML.length)*/ 
+//Copyright © 2022 Ordanizador 2000
+//Desenvolvido por Roberth Fontes Ovelar
